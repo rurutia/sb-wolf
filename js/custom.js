@@ -4,6 +4,28 @@ jQuery(document).ready(function() {
 
   $('.po').popover({});
 
+  $('#search').keypress(function(e) {
+    if(e.which == 13) {
+        var val = $('#search').val();
+        if(val == 'gallery') {
+          $('section').hide();
+          $('#sec4').show();
+        }
+        else if(val == 'diet') {
+          $('section').hide();
+          $('#sec2').show();
+        }
+        else if(val == 'mating') {
+          $('section').hide();
+          $('#sec3').show();
+        }
+        else {
+          $('section').show();
+          $("html, body").animate({ scrollTop: 0 }, "fast");
+        }
+    }
+  });
+
   //lightbox
   $(document).ready(function(){
     $('a').nivoLightbox();
