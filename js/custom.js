@@ -19,6 +19,14 @@ jQuery(document).ready(function() {
           $('section').hide();
           $('#sec3').show();
         }
+                else if(val == 'anatomy') {
+          $('section').hide();
+          $('#sec5').show();
+        }
+                        else if(val == 'email') {
+          $('section').hide();
+          $('#sec60').show();
+        }
         else {
           $('section').show();
           $("html, body").animate({ scrollTop: 0 }, "fast");
